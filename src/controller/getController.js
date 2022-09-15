@@ -13,10 +13,10 @@ const getCollegeDetails = async function (req, res){
             return res.status(400).send({status: false, message: "Please provide college name in queryparam"})
         }
 
-        const result = {}
+        
 
 // ======================================= find college data by using college Name ====================================
-       
+            const result = {}
     
             const collegeData = await collegeModel.findOne({name: collegeName, isDeleted: false })
             if (!collegeData) {
